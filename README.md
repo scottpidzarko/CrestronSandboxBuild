@@ -1,6 +1,6 @@
 # CrestronSandboxBuildSample
 
-Samples of building Crestron
+Samples of building for a Crestron 3-series library using Visual Studio 2019
 
 This is a work-in-progress.
 
@@ -17,11 +17,13 @@ Stopping points
 1) Registry edits needed?
 2) File pathing - for people without C:\ drive?
 
-## Stretch goals include
+## Stretch Goals
 
 1) Introducing a Nuget package that provides the props/targets files and invokes the signing functionality using the Crestron plugin. Crestron plugin installed by user unless Crestron agrees to authorize distribution of the dll.
 2) Changing nuget package to play nice with Crestron's nuget packages and utilize the dlls distributed by the nuget package
 3) Custom C# project template for anything that can't be made with the nuget package?
-4) An example of succesfully Multitargeting a library/program with an SDK-style .csproj and having compiler directives to utilize sandbox/non-sandbox function
-5) A sample of building on non-windows systems (user must provide own Crestron plugin dll for signing)
+4) Crestron ProgramLibrary and Program samples
+5) An example of succesfully Multitargeting a library/program with an SDK-style .csproj and having compiler directives to utilize sandbox/non-sandbox function
+6) A sample of building on non-windows systems (user must provide own Crestron plugin dll for signing)
+7) Test builds with visual studio 2022
 
