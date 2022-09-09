@@ -33,4 +33,5 @@ using System.Runtime.InteropServices;
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
+// For some reason this isn't supported as far as I can tell when building for .net 3.5 CE
+//[assembly: AssemblyFileVersion("1.0.0.0")]
