@@ -2,9 +2,20 @@
 
 Samples of building for a Crestron 3-series library using Visual Studio 2019
 
-This is a work-in-progress.
+This is a work-in-progress. This
 
 ## Prerequisites
+
+### Environment setup
+Your machine should be setup to build Crestron C# libraries/programs for 3-series processors. If you haven't yet setup for 3-series development with VS2008 and the Crestron plugin, at minimum you'll need to do the following:
+
+1) Enable dotnet framework 3.5 on the turn windows features on and off
+2) Install NETCFSetupv35.msi
+3) Install NETCFv35PowerToys.msi
+4) Install the Crestron plugin
+
+There may need to be registry keys added too - stay tuned about that.
+
 ### S# Library
 1) In visual studio, create a new .NET framework project. Target framework version should be 3.5.
 2) Unload the project in solution view (right click the project -> unload project)
@@ -29,8 +40,27 @@ This is a work-in-progress.
 1) Introducing a Nuget package that provides the props/targets files and invokes the signing functionality using the Crestron plugin. Crestron plugin installed by user unless Crestron agrees to authorize distribution of the dll.
 2) Changing nuget package to play nice with Crestron's nuget packages and utilize the dlls distributed by the nuget package
 3) Custom C# project template for anything that can't be made with the nuget package?
+4) Offer custom MSBuild properties in the .csproj to turn on S# plugin logging and to customize the S# plugin directory
 4) Crestron ProgramLibrary and Program samples
-5) An example of succesfully Multitargeting a library/program with an SDK-style .csproj and having compiler directives to utilize sandbox/non-sandbox function
+5) An example of succesfully Multitargeting a library/program with an SDK-style .csproj and having compiler directives to utilize sandbox/non-sandbox function. I have this mostly working but there are issues with a registry key for net 2.0 that isn't an issue for an older style `.csproj`
 6) A sample of building on non-windows systems (user must provide own Crestron plugin dll for signing)
 7) Test builds with visual studio 2022
 
+## Resources and background
+
+This came about because I was tired of opening VS2008 to do 3-series development. It offered less refactoring features, poorer Intellisense, no integration with git out of the box, but I think the thing that annoyed me the most was that it's "dark mode" wasn't quite dark mode. Then one day, I came accross [this](https://gist.github.com/skarllot/4953ddb6e23d8a6f0816029c4155997a) gist.
+
+And so my dive into tinkering with the Crestron plugin, learning *way* more about MSBuild than I had originally intended, and many evenings of troubleshooting and research began. 
+
+Here's a list of sites I kept in my bookmarks while working on this:
+
+https://docs.microsoft.com/en-us/visualstudio/msbuild/standard-and-custom-toolset-configurations?view=vs-2022
+https://kb.froglogic.com/coco/howto/visualstudio-verbosity/
+https://docs.microsoft.com/en-us/visualstudio/msbuild/msbuild-dot-targets-files?view=vs-2022
+https://github.com/WindowsCE/NETStandard.WindowsCE/blob/master/NETStandard.WindowsCE.props
+https://docs.microsoft.com/en-us/previous-versions/visualstudio/visual-studio-2008/bb383796(v=vs.90)?redirectedfrom=M
+https://github.com/dotnet/roslyn/blob/main/docs/compilers/CSharp/Compiler%20Breaking%20Changes%20-%20VS2015.md
+https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/breaking-changes?source=recommendations
+https://natemcmaster.com/blog/2017/07/05/msbuild-task-in-nuget/
+ 
+A special thanks to [Troy](https://github.com/bitm0de) and [Andrew(https://github.com/andrew-welker)] for their help and pointers they gave me along the way with this project.
