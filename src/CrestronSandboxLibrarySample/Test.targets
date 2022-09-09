@@ -92,7 +92,7 @@
           
 					string absoluteOutputPath = targetDir;
 					string fullAssemblyName = targetPath;
-					string compiledFileName = archiveFilename + ".clz";
+					string compiledFileName = archiveFilename;
 					string archiveFullName = Path.Combine(absoluteOutputPath, compiledFileName);
           
           // setup the SIMPLSharp service
@@ -321,7 +321,7 @@
 					xmlDoc.Save(programInfoFilename);		
 					
           /*
-					string archiveName = Path.Combine(outputPath, archiveFilename + ".clz");
+					string archiveName = Path.Combine(outputPath, archiveFilename);
 					if(File.Exists(archiveName))
 						File.Delete(archiveName);
 				  
