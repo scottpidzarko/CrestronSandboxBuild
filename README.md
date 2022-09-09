@@ -1,8 +1,6 @@
 # CrestronSandboxBuildSample
 
-Samples of building for a Crestron 3-series library using Visual Studio 2019
-
-This is a work-in-progress. This
+Samples of building for a Crestron 3-series library using Visual Studio 2019. This is a work-in-progress.
 
 ## Prerequisites
 
@@ -63,4 +61,4 @@ https://github.com/dotnet/roslyn/blob/main/docs/compilers/CSharp/Compiler%20Brea
 https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/breaking-changes?source=recommendations
 https://natemcmaster.com/blog/2017/07/05/msbuild-task-in-nuget/
  
-A special thanks to [Troy](https://github.com/bitm0de) and [Andrew(https://github.com/andrew-welker)] for their help and pointers they gave me along the way with this project.
+A special thanks to [Troy](https://github.com/bitm0de) and [Andrew](https://github.com/andrew-welker) for their help and pointers they gave me along the way with this project.
