@@ -7,12 +7,19 @@ Samples of building for a Crestron 3-series library using Visual Studio 2019. Th
 ### Environment setup
 Your machine should be setup to build Crestron C# libraries/programs for 3-series processors. If you haven't yet setup for 3-series development with VS2008 and the Crestron plugin, at minimum you'll need to do the following:
 
-1) Enable dotnet framework 3.5 on the turn windows features on and off
-2) Install NETCFSetupv35.msi
-3) Install NETCFv35PowerToys.msi
-4) Install the Crestron plugin
+1) Install Visual Studio 2019 (Tested with Community edition but other versions should work OK). Make sure the following components are selected
+* Workloads - select .NET development
+* Individual Components - .Net Framework 3.5 development tools
+* Individual Components - .Net Framework 4.7 SDK (if you also want to do 4-series development)
+* Individual Components - .Net Framework 4.7 targeting pack (if you also want to do 4-series development)
+2) Enable ".NET Framework 3.5 (includes .NET 2.0 and 3.0)" on the "turn windows features on and off" dialog
+3) Install NETCFSetupv35.msi (get this from archive.org or from Crestron's support site if you are a Crestron partner)
+4) Install Visual Studio 2008 - this is needed because the Crestron plugin checks for it
+5) Install Visual Studio 2008 Service pack 1 - this is also needed because the Crestron plugin checks for it
+6) Install Crestron Toolbox and Device Database using Master installer (again, because the Crestron plugin checks for it)
+7) Install the Crestron S# plugin
 
-There may need to be registry keys added too - stay tuned about that.
+Note that all that we really need from steps 4-8 are the Crestron plugin DLLs. If in the future Crestron can be convinced to provide the dlls along with a nuget package then that will dramatically lower the amount of effort needed.
 
 ### S# Library
 1) In visual studio, create a new .NET framework project. Target framework version should be 3.5.
@@ -24,11 +31,11 @@ There may need to be registry keys added too - stay tuned about that.
 
 ## TODO
 
-1) Registry edits needed? I had to do this in testing. Compact framework build targets look for registry keys to determine tool paths and file paths it needs and those were not set as part of the compact framework install path. I don't know if power toys would either. I don't know if they would get installed as part of net framework 2.0/3.5 SDK but have gotten cleaned due to windows updates. We can provide a .reg file if needed but this can be a manual step that makes adoption poorer.
+1) ~~Registry edits needed? I had to do this in testing. Compact framework build targets look for registry keys to determine tool paths and file paths it needs and those were not set as part of the compact framework install path. I don't know if power toys would either. I don't know if they would get installed as part of net framework 2.0/3.5 SDK but have gotten cleaned due to windows updates. We can provide a .reg file if needed but this can be a manual step that makes adoption poorer.~~ DONE, we do not need these registry paths on a new system. They may still be required as part of the SDK-style project stretch goal but this can be revisited then
 2) File pathing - for people without C:\ drive? This shouldn't be a huge issue, MSBuild provides lots of properties we can utilize. A little bit of research
 3) Make a .props file as well that the .csproj can reference so that the actual .csproj stays as vanilla as possible.
 4) More Documentation and user guides
-5) Confirming this works from a freshly setup windows 10 system
+5) ~~Confirming this works from a freshly setup windows 10 system~~ DONE
 6) Confirming this works from a freshly setup windows 11 system
 7) User testing with a variety of real life projects
 8) Figure out how to get rid of the warning about "ResolveSDKReferences" target not existing
