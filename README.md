@@ -59,13 +59,38 @@ And so my dive into tinkering with the Crestron plugin, learning *way* more abou
 
 Here's a list of sites I kept in my bookmarks while working on this:
 
+https://docs.microsoft.com/en-us/visualstudio/msbuild/build-process-overview?source=recommendations&view=vs-2022
+
 https://docs.microsoft.com/en-us/visualstudio/msbuild/standard-and-custom-toolset-configurations?view=vs-2022
+
+https://docs.microsoft.com/en-us/visualstudio/msbuild/how-to-extend-the-visual-studio-build-process?view=vs-2022
+
+https://docs.microsoft.com/en-us/visualstudio/msbuild/overriding-toolsversion-settings?source=recommendations&view=vs-2022
+
+https://askcodes.net/coding/is-there-a-simple-way-to-make-visual-studio-2015-use-a-specific-toolsversion-
+
+https://docs.microsoft.com/en-us/visualstudio/msbuild/msbuild-reserved-and-well-known-properties?view=vs-2022
+
+https://docs.microsoft.com/en-us/visualstudio/msbuild/msbuild-task-reference?view=vs-2022
+
 https://kb.froglogic.com/coco/howto/visualstudio-verbosity/
+
 https://docs.microsoft.com/en-us/visualstudio/msbuild/msbuild-dot-targets-files?view=vs-2022
+
 https://github.com/WindowsCE/NETStandard.WindowsCE/blob/master/NETStandard.WindowsCE.props
+
 https://docs.microsoft.com/en-us/previous-versions/visualstudio/visual-studio-2008/bb383796(v=vs.90)?redirectedfrom=M
+
 https://github.com/dotnet/roslyn/blob/main/docs/compilers/CSharp/Compiler%20Breaking%20Changes%20-%20VS2015.md
+
 https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/breaking-changes?source=recommendations
+
 https://natemcmaster.com/blog/2017/07/05/msbuild-task-in-nuget/
+
+https://claires.site/2017/01/04/multi-targeting-the-world-a-single-project-to-rule-them-all/
+
+https://docs.microsoft.com/en-us/visualstudio/ide/visual-studio-multi-targeting-overview?view=vs-2022
+
+###Credits
  
 A special thanks to [Troy](https://github.com/bitm0de) and [Andrew](https://github.com/andrew-welker) for their help and pointers they gave me along the way with this project.
