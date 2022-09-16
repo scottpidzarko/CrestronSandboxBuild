@@ -91,6 +91,6 @@ https://claires.site/2017/01/04/multi-targeting-the-world-a-single-project-to-ru
 
 https://docs.microsoft.com/en-us/visualstudio/ide/visual-studio-multi-targeting-overview?view=vs-2022
 
-###Credits
+### Credits
  
 A special thanks to [Troy](https://github.com/bitm0de) and [Andrew](https://github.com/andrew-welker) for their help and pointers they gave me along the way with this project.
