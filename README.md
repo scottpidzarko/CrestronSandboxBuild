@@ -59,6 +59,8 @@ And so my dive into tinkering with the Crestron plugin, learning *way* more abou
 
 Here's a list of sites I kept in my bookmarks while working on this:
 
+https://learn.microsoft.com/en-us/previous-versions/visualstudio/visual-studio-2010/bb397456(v=vs.100)?redirectedfrom=MSDN
+
 https://learn.microsoft.com/en-us/visualstudio/msbuild/msbuild-task-reference?view=vs-2022
 
 https://learn.microsoft.com/en-us/visualstudio/msbuild/build-process-overview?source=recommendations&view=vs-2022
