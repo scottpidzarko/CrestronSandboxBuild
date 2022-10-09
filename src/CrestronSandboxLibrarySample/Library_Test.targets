@@ -80,7 +80,7 @@
       <Code Type="Fragment" Language="cs">
         <![CDATA[			                  
 			  try
-			  {
+			  {				          
 					// ************ This starts the part for signing the dlls with the crestron plugin ****************
           // Constants setup
           string logfolder = @"\SIMPLSharpLogs";
@@ -207,10 +207,10 @@
 						.Distinct()
 						.ToList<string>();
 
-					s.CreateArchive(
+					/*s.CreateArchive(
 						absoluteOutputPath,
 						ListOfDllsInProjectInfo,
-						archiveFullName);
+						archiveFullName); */
 
 					return true;
 				
@@ -319,8 +319,7 @@
 					plugin.AppendChild(node);
 						
 					xmlDoc.Save(programInfoFilename);		
-					
-          /*
+					          
 					string archiveName = Path.Combine(outputPath, archiveFilename);
 					if(File.Exists(archiveName))
 						File.Delete(archiveName);
@@ -330,10 +329,10 @@
 					{
 						var outputFiles = Directory.GetFiles(outputPath, "*.*", SearchOption.AllDirectories);
 						var copyOnvif = File.Exists(Path.Combine(outputPath, "SimplSharpOnvifInterface.dll"));
-						var packageFiles = Directory.GetFiles(packagePath, "*.*", SearchOption.AllDirectories);	
-						var files = new string[outputFiles.Length + packageFiles.Length];
+						//var packageFiles = Directory.GetFiles(packagePath, "*.*", SearchOption.AllDirectories);	
+						var files = new string[outputFiles.Length]; //+ packageFiles.Length];
 						outputFiles.CopyTo(files, 0);
-						packageFiles.CopyTo(files, outputFiles.Length);	
+						//packageFiles.CopyTo(files, outputFiles.Length);	
 							
 						foreach (var filename in files)
 						{
@@ -347,7 +346,7 @@
 								using (Stream fileStreamInZip = archive.CreateEntry(filename.Replace(outputPath, null).Replace(packagePath, null)).Open())
 									fileStream.CopyTo(fileStreamInZip);
 						}
-					}    */   
+					}
 
 					return true;
 				}
