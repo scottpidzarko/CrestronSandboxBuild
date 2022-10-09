@@ -3,11 +3,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DA98CEF3-5021-4990-B03A-9CB34D782E23}</ProjectGuid>
+    <ProjectGuid>{23B50C84-D1BE-4219-8FAE-13B419E24582}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CrestronSandboxLibrarySample</RootNamespace>
-    <AssemblyName>CrestronSandboxLibrarySample</AssemblyName>
+    <RootNamespace>CrestronSandboxProgramSample</RootNamespace>
+    <AssemblyName>CrestronSandboxProgramSample</AssemblyName>
     <!-- below is required so that it can find the net framework CE SDK path -->
     <PlatformFamilyName>WindowsCE</PlatformFamilyName>
     <!-- this identifies that the platform will be for windows CE -->
@@ -41,8 +41,7 @@
     <DefineConstants>DEBUG;TRACE;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
-    <RegisterForComInterop>false</RegisterForComInterop>
+    <GenerateSerializationAssemblies>off</GenerateSerializationAssemblies>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <AllowedReferenceRelatedFileExtensions>.allowedReferenceRelatedFileExtensions</AllowedReferenceRelatedFileExtensions>

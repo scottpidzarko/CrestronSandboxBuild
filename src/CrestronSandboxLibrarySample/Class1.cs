@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using Crestron.SimplSharp;
 /* 
 This is a pretty minimal file, I was just doing it to see if the compiler being invoked would optimize
 the delegate call we see below
@@ -43,7 +43,13 @@ namespace CrestronSandboxLibrarySample
         internal event DelegateNoParametersEvent RecoverNotificationEvent;
         public Class1()
         {
+            CrestronConsole.PrintLine("Hello World!");
             this.RecoverNotificationEvent += new DelegateNoParametersEvent(this.RecoverNotificationEventHandler);
+        }
+
+        public void TestMethod()
+        {
+            CrestronConsole.PrintLine("Hello from TestMethod!");
         }
 
         private void RecoverNotificationEventHandler(EventArgs args)
