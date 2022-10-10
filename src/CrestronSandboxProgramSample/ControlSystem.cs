@@ -24,10 +24,10 @@ namespace CrestronSandboxProgramSample
         /// </summary>
         public ControlSystem()
             : base()
-        {
+        {            
             try
             {                
-                Thread.MaxNumberOfUserThreads = 20;
+                Thread.MaxNumberOfUserThreads = 20;                
 
                 //Subscribe to the controller events (System, Program, and Ethernet)
                 CrestronEnvironment.SystemEventHandler += new SystemEventHandler(_ControllerSystemEventHandler);
