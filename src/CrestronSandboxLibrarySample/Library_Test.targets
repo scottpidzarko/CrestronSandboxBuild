@@ -26,7 +26,6 @@
                Architecture="x86" 
                AssemblyFile="..\SignForCrestronSandboxTask\bin\Debug\SignForCrestronSandboxTask.dll"
 			   />
-	
   <Import Project="C:\Windows\Microsoft.NET\Framework\v3.5\Microsoft.CSharp.Targets" />
   <Import Project="C:\Windows\Microsoft.NET\Framework\v3.5\Microsoft.CompactFramework.Common.targets" />
 </Project>

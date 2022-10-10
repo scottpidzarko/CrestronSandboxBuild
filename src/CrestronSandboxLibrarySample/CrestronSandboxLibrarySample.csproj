@@ -1,5 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- ToolsVersion is 15 by default, don't know why Current can't be used, Visual studio ignores this anyway -->
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="Library_Test.props" />
+  <!-- The Microsoft.Common.props import will need to be replaced -->
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -8,32 +11,11 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CrestronSandboxLibrarySample</RootNamespace>
     <AssemblyName>CrestronSandboxLibrarySample</AssemblyName>
-    <!-- below is required so that it can find the net framework CE SDK path -->
-    <PlatformFamilyName>WindowsCE</PlatformFamilyName>
-    <!-- this identifies that the platform will be for windows CE -->
-    <PlatformID>E2BECB1F-8C8C-41ba-B736-9BE7D946A398</PlatformID>
-    <OSVersion>5.0</OSVersion>
-    <DeployDirSuffix>SmartDeviceProject1</DeployDirSuffix>
-    <NativePlatformName>Windows CE</NativePlatformName>
-    <FormFactorID>
-    </FormFactorID>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <Deterministic>true</Deterministic>
-    <!-- added by me -->
-    <GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
-    <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
-    <TargetFrameworkProfile>CompactFramework</TargetFrameworkProfile>
-    <DefineConstants>$(DefineConstants);NET35_CF;WindowsCE</DefineConstants>
-    <NoStdLib>True</NoStdLib>
-    <NoConfig>true</NoConfig>
     <FileAlignment>512</FileAlignment>
-    <Optimize>False</Optimize>
-    <AssemblySearchPaths>$(AssemblySearchPaths);..\..\packages\Crestron.SimplSharp.SDK.Library.2.18.112\lib\net47\;C:\Program Files (x86)\Microsoft.NET\SDK\CompactFramework\v3.5\WindowsCE;</AssemblySearchPaths>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <AllowedReferenceRelatedFileExtensions>.allowedReferenceRelatedFileExtensions</AllowedReferenceRelatedFileExtensions>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -41,17 +23,13 @@
     <DefineConstants>DEBUG;TRACE;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
-    <RegisterForComInterop>false</RegisterForComInterop>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <AllowedReferenceRelatedFileExtensions>.allowedReferenceRelatedFileExtensions</AllowedReferenceRelatedFileExtensions>
-    <DebugType>none</DebugType>
+    <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <GenerateSerializationAssemblies>off</GenerateSerializationAssemblies>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="mscorlib, Version=3.5.0.0, Culture=neutral, PublicKeyToken=969db8053d3322ac" />
@@ -100,10 +78,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Library_Test.props" />
+    <None Include="Library_Test.targets" />
     <None Include="packages.config" />
-    <None Include="Test.targets" />
   </ItemGroup>
-  <Import Project="Test.targets" />
   <Import Project="..\..\packages\Crestron.SimplSharp.SDK.Library.2.18.112\build\Crestron.SimplSharp.SDK.Library.targets" Condition="Exists('..\..\packages\Crestron.SimplSharp.SDK.Library.2.18.112\build\Crestron.SimplSharp.SDK.Library.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
@@ -111,4 +89,5 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\..\packages\Crestron.SimplSharp.SDK.Library.2.18.112\build\Crestron.SimplSharp.SDK.Library.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Crestron.SimplSharp.SDK.Library.2.18.112\build\Crestron.SimplSharp.SDK.Library.targets'))" />
   </Target>
+  <Import Project="Library_Test.targets" />
 </Project>
