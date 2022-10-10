@@ -9,6 +9,7 @@
     <AssemblyFoldersSuffix>$(PlatformFamilyName)\AssemblyFoldersEx</AssemblyFoldersSuffix>
     <AssemblyFoldersExConditions>,OSVersion=$(OSVersion):Platform=$(PlatformID)</AssemblyFoldersExConditions>
     <TargetCompactFramework>true</TargetCompactFramework>
+	  <!-- can I delete this and rely on the Crestron SDK nuget to set it?-->
     <ArchiveExtension>.clz</ArchiveExtension>
   </PropertyGroup>
   <Target Name="SimplSharpSignProcess" BeforeTargets="SimplSharpPostProcess" >	  

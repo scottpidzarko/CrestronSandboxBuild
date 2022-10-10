@@ -14,6 +14,8 @@
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <Deterministic>true</Deterministic>
     <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -57,9 +59,6 @@
     <Reference Include="SimplSharpOnvifInterface">
       <HintPath>..\..\packages\Crestron.SimplSharp.SDK.Library.2.18.112\lib\net47\SimplSharpOnvifInterface.dll</HintPath>
     </Reference>
-    <Reference Include="SimplSharpProgrammingInterfaces">
-      <HintPath>..\..\packages\Crestron.SimplSharp.SDK.Library.2.18.112\lib\net47\SimplSharpProgrammingInterfaces.dll</HintPath>
-    </Reference>
     <Reference Include="SimplSharpReflectionInterface">
       <HintPath>..\..\packages\Crestron.SimplSharp.SDK.Library.2.18.112\lib\net47\SimplSharpReflectionInterface.dll</HintPath>
     </Reference>
@@ -82,12 +81,12 @@
     <None Include="Library_Test.targets" />
     <None Include="packages.config" />
   </ItemGroup>
-  <Import Project="..\..\packages\Crestron.SimplSharp.SDK.Library.2.18.112\build\Crestron.SimplSharp.SDK.Library.targets" Condition="Exists('..\..\packages\Crestron.SimplSharp.SDK.Library.2.18.112\build\Crestron.SimplSharp.SDK.Library.targets')" />
+  <Import Project="Library_Test.targets" />
+  <Import Project="..\..\packages\Crestron.SimplSharp.SDK.Library.2.19.16\build\Crestron.SimplSharp.SDK.Library.targets" Condition="Exists('..\..\packages\Crestron.SimplSharp.SDK.Library.2.19.16\build\Crestron.SimplSharp.SDK.Library.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\..\packages\Crestron.SimplSharp.SDK.Library.2.18.112\build\Crestron.SimplSharp.SDK.Library.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Crestron.SimplSharp.SDK.Library.2.18.112\build\Crestron.SimplSharp.SDK.Library.targets'))" />
+    <Error Condition="!Exists('..\..\packages\Crestron.SimplSharp.SDK.Library.2.19.16\build\Crestron.SimplSharp.SDK.Library.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Crestron.SimplSharp.SDK.Library.2.19.16\build\Crestron.SimplSharp.SDK.Library.targets'))" />
   </Target>
-  <Import Project="Library_Test.targets" />
 </Project>

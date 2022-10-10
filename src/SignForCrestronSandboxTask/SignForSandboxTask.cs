@@ -248,7 +248,7 @@ namespace Microsoft.Build.Tasks
                     }
                 }
 
-                Console.WriteLine("Creating project manifest");
+                Log.LogMessage("Creating project manifest");
                 s.CreateManifest(fullAssemblyName, compiledFileName, dependencies, references);
 
                 IList<string> ListOfDllsInProjectInfo;

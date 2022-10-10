@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Xml.Serialization;
-using System.IO;
-using Crestron.SimplSharp;
+using System;
+using Crestron.SimplSharp;                          	// For Basic SIMPL# Classes
 using Crestron.SimplSharpPro;                       	// For Basic SIMPL#Pro classes
 using Crestron.SimplSharpPro.CrestronThread;        	// For Threading
 using Crestron.SimplSharpPro.Diagnostics;		    	// For System Monitor Access
@@ -32,12 +27,12 @@ namespace CrestronSandboxProgramSample
         {
             try
             {
-                Thread.MaxNumberOfUserThreads = 20;                
-                
+                Thread.MaxNumberOfUserThreads = 20;
+
                 //Subscribe to the controller events (System, Program, and Ethernet)
-                CrestronEnvironment.SystemEventHandler += new SystemEventHandler(ControlSystem_ControllerSystemEventHandler);
-                CrestronEnvironment.ProgramStatusEventHandler += new ProgramStatusEventHandler(ControlSystem_ControllerProgramEventHandler);
-                CrestronEnvironment.EthernetEventHandler += new EthernetEventHandler(ControlSystem_ControllerEthernetEventHandler);
+                CrestronEnvironment.SystemEventHandler += new SystemEventHandler(_ControllerSystemEventHandler);
+                CrestronEnvironment.ProgramStatusEventHandler += new ProgramStatusEventHandler(_ControllerProgramEventHandler);
+                CrestronEnvironment.EthernetEventHandler += new EthernetEventHandler(_ControllerEthernetEventHandler);
             }
             catch (Exception e)
             {
@@ -62,7 +57,7 @@ namespace CrestronSandboxProgramSample
         {
             try
             {
-                CrestronConsole.PrintLine("Hello world!");
+                CrestronConsole.PrintLine("Hello World!");
             }
             catch (Exception e)
             {
@@ -78,7 +73,7 @@ namespace CrestronSandboxProgramSample
         /// such as whether it's a Link Up or Link Down event. It will also indicate 
         /// wich Ethernet adapter this event belongs to.
         /// </param>
-        void ControlSystem_ControllerEthernetEventHandler(EthernetEventArgs ethernetEventArgs)
+        void _ControllerEthernetEventHandler(EthernetEventArgs ethernetEventArgs)
         {
             switch (ethernetEventArgs.EthernetEventType)
             {//Determine the event type Link Up or Link Down
@@ -106,7 +101,7 @@ namespace CrestronSandboxProgramSample
         /// for other programs stopping
         /// </summary>
         /// <param name="programStatusEventType"></param>
-        void ControlSystem_ControllerProgramEventHandler(eProgramStatusEventType programStatusEventType)
+        void _ControllerProgramEventHandler(eProgramStatusEventType programStatusEventType)
         {
             switch (programStatusEventType)
             {
@@ -133,7 +128,7 @@ namespace CrestronSandboxProgramSample
         /// removable media is ejected / re-inserted.
         /// </summary>
         /// <param name="systemEventType"></param>
-        void ControlSystem_ControllerSystemEventHandler(eSystemEventType systemEventType)
+        void _ControllerSystemEventHandler(eSystemEventType systemEventType)
         {
             switch (systemEventType)
             {
