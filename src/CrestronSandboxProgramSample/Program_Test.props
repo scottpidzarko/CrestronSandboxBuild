@@ -19,7 +19,7 @@
 		<NoStdLib>True</NoStdLib>
 		<NoConfig>true</NoConfig>
 		  <!-- places to search for assemblies. This may change depending on compatibility with crestron SDK nuget packages -->
-		<AssemblySearchPaths>$(AssemblySearchPaths)C:\Program Files (x86)\Crestron\Cresdb\Programming\Libraries\Required References;C:\Program Files (x86)\Crestron\Cresdb\Programming\Libraries;C:\Program Files (x86)\Microsoft.NET\SDK\CompactFramework\v3.5\WindowsCE;</AssemblySearchPaths>		 
+		<!-- <AssemblySearchPaths>$(AssemblySearchPaths)C:\Program Files (x86)\Crestron\Cresdb\Programming\Libraries\Required References;C:\Program Files (x86)\Crestron\Cresdb\Programming\Libraries;C:\Program Files (x86)\Microsoft.NET\SDK\CompactFramework\v3.5\WindowsCE;</AssemblySearchPaths> -->
 		<GenerateSerializationAssemblies>off</GenerateSerializationAssemblies>
 		<!-- this is to remove the xml files from the output -->
 		<AllowedReferenceRelatedFileExtensions>.allowedReferenceRelatedFileExtensions</AllowedReferenceRelatedFileExtensions>		

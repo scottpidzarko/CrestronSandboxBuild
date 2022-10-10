@@ -36,37 +36,37 @@
   <ItemGroup>
     <Reference Include="mscorlib, Version=3.5.0.0, Culture=neutral, PublicKeyToken=969db8053d3322ac" />
     <Reference Include="SimplSharpAutoUpdateInterface">
-      <HintPath>..\..\packages\Crestron.SimplSharp.SDK.Library.2.18.112\lib\net47\SimplSharpAutoUpdateInterface.dll</HintPath>
+      <HintPath>..\..\packages\Crestron.SimplSharp.SDK.Library.2.19.16\lib\net47\SimplSharpAutoUpdateInterface.dll</HintPath>
     </Reference>
     <Reference Include="SimplSharpCryptographyInterface">
-      <HintPath>..\..\packages\Crestron.SimplSharp.SDK.Library.2.18.112\lib\net47\SimplSharpCryptographyInterface.dll</HintPath>
+      <HintPath>..\..\packages\Crestron.SimplSharp.SDK.Library.2.19.16\lib\net47\SimplSharpCryptographyInterface.dll</HintPath>
     </Reference>
     <Reference Include="SimplSharpCustomAttributesInterface">
-      <HintPath>..\..\packages\Crestron.SimplSharp.SDK.Library.2.18.112\lib\net47\SimplSharpCustomAttributesInterface.dll</HintPath>
+      <HintPath>..\..\packages\Crestron.SimplSharp.SDK.Library.2.19.16\lib\net47\SimplSharpCustomAttributesInterface.dll</HintPath>
     </Reference>
     <Reference Include="SimplSharpCWSHelperInterface">
-      <HintPath>..\..\packages\Crestron.SimplSharp.SDK.Library.2.18.112\lib\net47\SimplSharpCWSHelperInterface.dll</HintPath>
+      <HintPath>..\..\packages\Crestron.SimplSharp.SDK.Library.2.19.16\lib\net47\SimplSharpCWSHelperInterface.dll</HintPath>
     </Reference>
     <Reference Include="SimplSharpExchangeWebServices">
-      <HintPath>..\..\packages\Crestron.SimplSharp.SDK.Library.2.18.112\lib\net47\SimplSharpExchangeWebServices.dll</HintPath>
+      <HintPath>..\..\packages\Crestron.SimplSharp.SDK.Library.2.19.16\lib\net47\SimplSharpExchangeWebServices.dll</HintPath>
     </Reference>
     <Reference Include="SimplSharpHelperInterface">
-      <HintPath>..\..\packages\Crestron.SimplSharp.SDK.Library.2.18.112\lib\net47\SimplSharpHelperInterface.dll</HintPath>
+      <HintPath>..\..\packages\Crestron.SimplSharp.SDK.Library.2.19.16\lib\net47\SimplSharpHelperInterface.dll</HintPath>
     </Reference>
     <Reference Include="SimplSharpNewtonsoft">
-      <HintPath>..\..\packages\Crestron.SimplSharp.SDK.Library.2.18.112\lib\net47\SimplSharpNewtonsoft.dll</HintPath>
+      <HintPath>..\..\packages\Crestron.SimplSharp.SDK.Library.2.19.16\lib\net47\SimplSharpNewtonsoft.dll</HintPath>
     </Reference>
     <Reference Include="SimplSharpOnvifInterface">
-      <HintPath>..\..\packages\Crestron.SimplSharp.SDK.Library.2.18.112\lib\net47\SimplSharpOnvifInterface.dll</HintPath>
+      <HintPath>..\..\packages\Crestron.SimplSharp.SDK.Library.2.19.16\lib\net47\SimplSharpOnvifInterface.dll</HintPath>
     </Reference>
     <Reference Include="SimplSharpReflectionInterface">
-      <HintPath>..\..\packages\Crestron.SimplSharp.SDK.Library.2.18.112\lib\net47\SimplSharpReflectionInterface.dll</HintPath>
+      <HintPath>..\..\packages\Crestron.SimplSharp.SDK.Library.2.19.16\lib\net47\SimplSharpReflectionInterface.dll</HintPath>
     </Reference>
     <Reference Include="SimplSharpSQLHelperInterface">
-      <HintPath>..\..\packages\Crestron.SimplSharp.SDK.Library.2.18.112\lib\net47\SimplSharpSQLHelperInterface.dll</HintPath>
+      <HintPath>..\..\packages\Crestron.SimplSharp.SDK.Library.2.19.16\lib\net47\SimplSharpSQLHelperInterface.dll</HintPath>
     </Reference>
     <Reference Include="SimplSharpTimerEventInterface">
-      <HintPath>..\..\packages\Crestron.SimplSharp.SDK.Library.2.18.112\lib\net47\SimplSharpTimerEventInterface.dll</HintPath>
+      <HintPath>..\..\packages\Crestron.SimplSharp.SDK.Library.2.19.16\lib\net47\SimplSharpTimerEventInterface.dll</HintPath>
     </Reference>
     <Reference Include="System, Version=3.5.0.0, Culture=neutral, PublicKeyToken=969db8053d3322ac" />
     <Reference Include="System.Core, Version=3.5.0.0, Culture=neutral, PublicKeyToken=969db8053d3322ac" />

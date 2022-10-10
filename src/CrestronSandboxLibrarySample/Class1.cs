@@ -8,7 +8,7 @@ This is a pretty minimal file, I was just doing it to see if the compiler being 
 the delegate call we see below
 
 csc v3.5 included with msbuild 3.5 / visual studio 2008 outputs this, which is acceptable:
-2008 happily compiles the below to something like this, which is a-OK:
+2008 happily compiles the below class to something like this, which is a-OK:
 
 [MethodImpl(MethodImplOptions.Synchronized)]
 internal void add_RecoverNotificationEvent(DelegateNoParametersEvent value)
@@ -32,7 +32,6 @@ internal void add_RecoverNotificationEvent(DelegateNoParametersEvent value)
     while (delegateNoParametersEvent != delegateNoParametersEvent2);
 }
 
-in our targets file we happily 
 */
 namespace CrestronSandboxLibrarySample
 {
@@ -49,7 +48,7 @@ namespace CrestronSandboxLibrarySample
 
         public void TestMethod()
         {
-            CrestronConsole.PrintLine("Hello from TestMethod!");
+            CrestronConsole.PrintLine("Hello from TestMethod!");            
         }
 
         private void RecoverNotificationEventHandler(EventArgs args)

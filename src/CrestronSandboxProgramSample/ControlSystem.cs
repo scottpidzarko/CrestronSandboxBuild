@@ -26,7 +26,7 @@ namespace CrestronSandboxProgramSample
             : base()
         {
             try
-            {
+            {                
                 Thread.MaxNumberOfUserThreads = 20;
 
                 //Subscribe to the controller events (System, Program, and Ethernet)
