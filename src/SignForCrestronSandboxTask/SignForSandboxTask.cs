@@ -118,6 +118,7 @@ namespace Microsoft.Build.Tasks
         {
             try
             {
+                // TODO delete this section of code - was added for indicating if build was 64-bit or not
                 if (IntPtr.Size == 4)
                 {
                     //throw new Exception("32 bit");
