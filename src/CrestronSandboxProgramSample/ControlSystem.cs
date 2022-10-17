@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Xml.Serialization;
 using System.IO;
 using Crestron.SimplSharp;
 using Crestron.SimplSharpPro;                       	// For Basic SIMPL#Pro classes
@@ -62,7 +61,7 @@ namespace CrestronSandboxProgramSample
         {
             try
             {
-                CrestronConsole.PrintLine("Hello world!");
+                CrestronConsole.PrintLine("Hello world from the program!");
             }
             catch (Exception e)
             {

@@ -35,7 +35,7 @@ internal void add_RecoverNotificationEvent(DelegateNoParametersEvent value)
 
 in our targets file we happily 
 */
-namespace CrestronSandboxLibrarySample
+namespace CrestronSandboxProgramLibrarySample
 {
     public delegate void DelegateNoParametersEvent(EventArgs args);
 
@@ -44,7 +44,7 @@ namespace CrestronSandboxLibrarySample
         internal event DelegateNoParametersEvent RecoverNotificationEvent;
         public Class1()
         {
-            CrestronConsole.PrintLine("Hello World from the library!");
+            CrestronConsole.PrintLine("Hello World from the program library!");
             this.RecoverNotificationEvent += new DelegateNoParametersEvent(this.RecoverNotificationEventHandler);
         }
 

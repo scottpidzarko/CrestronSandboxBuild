@@ -4,11 +4,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("CrestronSandboxLibrarySample")]
+[assembly: AssemblyTitle("CrestronSandboxProgramLibrarySample")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("CrestronSandboxLibrarySample")]
+[assembly: AssemblyProduct("CrestronSandboxProgramLibrarySample")]
 [assembly: AssemblyCopyright("Copyright ©  2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -19,7 +19,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("8D785B8F-3ABC-4D35-81DB-AFE4D83B5A50")]
+[assembly: Guid("5D6F1778-497D-49CE-AE30-B15A65EB3218")]
 
 // Version information for an assembly consists of the following four values:
 //
