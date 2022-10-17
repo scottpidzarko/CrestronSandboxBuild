@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Crestron.SimplSharp;
 
 /* 
 This is a pretty minimal file, I was just doing it to see if the compiler being invoked would optimize
@@ -43,6 +44,7 @@ namespace CrestronSandboxLibrarySample
         internal event DelegateNoParametersEvent RecoverNotificationEvent;
         public Class1()
         {
+            CrestronConsole.PrintLine("Hello World from the library!");
             this.RecoverNotificationEvent += new DelegateNoParametersEvent(this.RecoverNotificationEventHandler);
         }
 

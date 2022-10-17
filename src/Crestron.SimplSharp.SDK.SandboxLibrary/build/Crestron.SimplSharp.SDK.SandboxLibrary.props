@@ -18,8 +18,8 @@
 		<!-- stop the std lib files from being added to output -->
 		<NoStdLib>True</NoStdLib>
 		<NoConfig>true</NoConfig>
-		  <!-- places to search for assemblies. This may change depending on compatibility with crestron SDK nuget packages -->
-		<AssemblySearchPaths>$(AssemblySearchPaths)C:\Program Files (x86)\Crestron\Cresdb\Programming\Libraries\Required References;C:\Program Files (x86)\Crestron\Cresdb\Programming\Libraries;C:\Program Files (x86)\Microsoft.NET\SDK\CompactFramework\v3.5\WindowsCE;</AssemblySearchPaths>		 
+		<!-- places to search for assemblies. This may change depending on compatibility with crestron SDK nuget packages -->
+		<AssemblySearchPaths>$(AssemblySearchPaths);C:\ProgramData\Crestron\SDK\;C:\ProgramData\Crestron\SDK\SSPDevices;C:\Program Files (x86)\Microsoft.NET\SDK\CompactFramework\v3.5\WindowsCE;C:\Program Files (x86)\Microsoft SQL Server Compact Edition\v3.5\Devices\Client\</AssemblySearchPaths>
 		<GenerateSerializationAssemblies>off</GenerateSerializationAssemblies>
 		<!-- this is to remove the xml files from the output -->
 		<AllowedReferenceRelatedFileExtensions>.allowedReferenceRelatedFileExtensions</AllowedReferenceRelatedFileExtensions>		
