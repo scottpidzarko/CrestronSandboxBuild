@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <!-- Required elements-->
+        <id>Crestron.SimplSharp.SDK.SandboxProgram</id>
+        <version>2.19.16-beta1</version>
+        <description>A version of Crestron.SimplSharp.SDK.Program suitable for use with a 3-series sandbox build. See https://github.com/scottpidzarko/CrestronSandboxBuild
+		This project pulls the required files from the Device Database. You MUST have the S# plugin and everything it requires installed for this package to function.</description>
+        <authors>Scott Pidzarko</authors>
+        <!-- Optional elements -->
+		<title>Crestron Sandbox S# Progam</title>
+		<copyright>Copyright (C) 2022 to the present CrestronSandboxBuild Contributors.</copyright>
+		<releaseNotes>
+			Initial release. Visual Studio 2019 and Jetbrains Rider tested with successful builds. Visual Studio 2022 is not supported at this time, but that is planned for a future release.
+		</releaseNotes>
+        <projectUrl>https://github.com/scottpidzarko/CrestronSandboxBuild</projectUrl>
+		<license type="expression">MIT</license>
+		<tags>Crestron Sandbox 3-series SIMPL# SimplSharp SIMPL#Pro S# compactframework</tags>
+		<repository type="git" url="https://github.com/scottpidzarko/CrestronSandboxBuild" branch="main" />
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<dependencies>			
+			<dependency id="Crestron.SimplSharp.SDK.SandboxProgramLibrary" version="2.19.16-beta1" />			
+			<dependency id="Crestron.SimplSharp.SDK.Program" version="2.19.16"/>	
+		</dependencies>
+    </metadata>	
+</package>
