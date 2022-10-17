@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32922.545
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrestronSandboxProgramSample", "src\CrestronSandboxProgramSample\CrestronSandboxProgramSample.csproj", "{E39DF659-AAB0-4A99-B9D6-CFCBF3169A04}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrestronSandboxProgramSample", "samples\CrestronSandboxProgramSample\CrestronSandboxProgramSample.csproj", "{E39DF659-AAB0-4A99-B9D6-CFCBF3169A04}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrestronSandboxLibrarySample", "src\CrestronSandboxLibrarySample\CrestronSandboxLibrarySample.csproj", "{8D785B8F-3ABC-4D35-81DB-AFE4D83B5A50}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrestronSandboxLibrarySample", "samples\CrestronSandboxLibrarySample\CrestronSandboxLibrarySample.csproj", "{8D785B8F-3ABC-4D35-81DB-AFE4D83B5A50}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrestronSandboxProgramLibrarySample", "src\CrestronSandboxProgramLibrarySample\CrestronSandboxProgramLibrarySample.csproj", "{5D6F1778-497D-49CE-AE30-B15A65EB3218}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrestronSandboxProgramLibrarySample", "samples\CrestronSandboxProgramLibrarySample\CrestronSandboxProgramLibrarySample.csproj", "{5D6F1778-497D-49CE-AE30-B15A65EB3218}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
