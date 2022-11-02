@@ -12,10 +12,12 @@
 	  <!-- can I delete this and rely on the Crestron SDK nuget to set it?-->
     <ArchiveExtension>.clz</ArchiveExtension>
 	  <!-- make intellisense work again? -->
-	  <CodeAnalysisTargets>C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VisualStudio\v17.0\CodeAnalysis\Microsoft.CodeAnalysis.targets</CodeAnalysisTargets>
+	  <!-- <CodeAnalysisTargets>C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VisualStudio\v17.0\CodeAnalysis\Microsoft.CodeAnalysis.targets</CodeAnalysisTargets> -->
   </PropertyGroup>
 	<!-- shut up the "The target "ResolveSdkReferences" does not exist in the project" warnings since they don't matter -->
-	<!-- <Target Name="ResolveSdkReferences"></Target>-->
+	<Target Name="ResolveSdkReferences" AfterTargets="ResolveNativeReferences">
+		<!-- Do nothing -->
+	</Target>
 	<Target Name="SimplSharpSignProcess" BeforeTargets="SimplSharpPostProcess" >	  
     <GetAssemblyIdentity AssemblyFiles="$(TargetPath)">
       <Output TaskParameter="Assemblies" ItemName="Assembly" />

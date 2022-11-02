@@ -23,7 +23,7 @@
 		<!-- <ReferencePath>C:\Program Files (x86)\Crestron\Cresdb\Programming\Libraries\Required References;C:\Program Files (x86)\Crestron\Cresdb\Programming\Libraries;$(ReferencePath);</ReferencePath> -->
 		<GenerateSerializationAssemblies>off</GenerateSerializationAssemblies>
 		<!-- this is to remove the xml files from the output -->
-		<AllowedReferenceRelatedFileExtensions>.allowedReferenceRelatedFileExtensions</AllowedReferenceRelatedFileExtensions>		
+		<!-- <AllowedReferenceRelatedFileExtensions>.allowedReferenceRelatedFileExtensions</AllowedReferenceRelatedFileExtensions> -->
 	</PropertyGroup>
 	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">	
 		<!-- this is pdbonly in the default csproj, I wonder if that's OK -->

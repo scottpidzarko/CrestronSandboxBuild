@@ -26,10 +26,10 @@ namespace CrestronSandboxProgramSample
             : base()
         {            
             try
-            {                
+            {                   
                 Thread.MaxNumberOfUserThreads = 20;                
 
-                //Subscribe to the controller events (System, Program, and Ethernet)
+                // Subscribe to the controller events (System, Program, and Ethernet)
                 CrestronEnvironment.SystemEventHandler += new SystemEventHandler(_ControllerSystemEventHandler);
                 CrestronEnvironment.ProgramStatusEventHandler += new ProgramStatusEventHandler(_ControllerProgramEventHandler);
                 CrestronEnvironment.EthernetEventHandler += new EthernetEventHandler(_ControllerEthernetEventHandler);
@@ -133,14 +133,14 @@ namespace CrestronSandboxProgramSample
             switch (systemEventType)
             {
                 case (eSystemEventType.DiskInserted):
-                    //Removable media was detected on the system
+                    // Removable media was detected on the system
                     break;
                 case (eSystemEventType.DiskRemoved):
-                    //Removable media was detached from the system
+                    // Removable media was detached from the system
                     break;
                 case (eSystemEventType.Rebooting):
-                    //The system is rebooting. 
-                    //Very limited time to preform clean up and save any settings to disk.
+                    // The system is rebooting. 
+                    // Very limited time to perform clean up and save any settings to disk.
                     break;
             }
 
