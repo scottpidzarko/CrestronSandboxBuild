@@ -55,11 +55,7 @@ namespace CrestronSandboxProgramSample
 
         public Class1()
         {
-<<<<<<<< HEAD:samples/CrestronSandboxLibrarySample/Class1.cs
             CrestronConsole.PrintLine("Hello World from the library!");
-========
-            CrestronConsole.PrintLine("Hello World!");
->>>>>>>> Feature_VS2022_Support:test/SdkProjectTest/Class1.cs
             this.RecoverNotificationEvent += new DelegateNoParametersEvent(this.RecoverNotificationEventHandler);
         }
 

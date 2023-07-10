@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <!-- Required elements-->
+        <id>Crestron.SimplSharp.SDK.SandboxLibrary</id>
+        <version>2.19.16-beta1</version>
+        <description>A version of Crestron.SimplSharp.SDK.Library suitable for use with a 3-series sandbox build. See https://github.com/scottpidzarko/CrestronSandboxBuild
+		This project pulls the required files from the Device Database. You MUST have the S# plugin and everything it requires installed for this package to function.</description>
+        <authors>Scott Pidzarko</authors>
+        <!-- Optional elements -->
+		<title>Crestron Sandbox S# Library</title>
+		<copyright>Copyright (C) 2022 to the present CrestronSandboxBuild Contributors.</copyright>
+		<releaseNotes>
+			Initial release. Visual Studio 2019 and Jetbrains Rider tested with successful builds. Visual Studio 2022 is not supported at this time, but that is planned for a future release.
+		</releaseNotes>
+        <projectUrl>https://github.com/scottpidzarko/CrestronSandboxBuild</projectUrl>
+		<license type="expression">MIT</license>
+		<tags>Crestron Sandbox 3-series SIMPL# SimplSharp SIMPL#Pro S# compactframework</tags>
+		<repository type="git" url="https://github.com/scottpidzarko/CrestronSandboxBuild" branch="main" />
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<dependencies>
+			<!-- we just need the targets and build from this package, the lib folder isn't useful in this case so exclude it -->
+			<dependency id="Crestron.SimplSharp.SDK.Library" version="2.19.16" />		
+		</dependencies>
+		<frameworkAssemblies>
+			<frameworkAssembly assemblyName="mscorlib" />
+			<frameworkAssembly assemblyName="Newtonsoft.Json.Compact" />
+			<frameworkAssembly assemblyName="System" />
+			<frameworkAssembly assemblyName="System.Core" />
+			<frameworkAssembly assemblyName="System.Data" />
+			<frameworkAssembly assemblyName="System.Data.SqlClient" />
+			<frameworkAssembly assemblyName="System.Drawing" />
+			<frameworkAssembly assemblyName="SimplSharpAutoUpdateInterface" />
+			<frameworkAssembly assemblyName="SimplSharpCryptographyInterface" />
+			<frameworkAssembly assemblyName="SimplSharpCustomAttributesInterface" />	
+			<frameworkAssembly assemblyName="SimplSharpCWSHelperInterface" />				
+			<frameworkAssembly assemblyName="SimplSharpExchangeWebServices.dll" />				
+			<frameworkAssembly assemblyName="SimplSharpHelperInterface" />
+			<frameworkAssembly assemblyName="SimplSharpNewtonsoft" />
+			<frameworkAssembly assemblyName="SimplSharpOnvifInterface.dll" />			
+			<frameworkAssembly assemblyName="SimplSharpReflectionInterface" />
+			<frameworkAssembly assemblyName="SimplSharpSQLHelperInterface.dll" />
+			<frameworkAssembly assemblyName="SimplSharpServiceEndpoint.dll" />
+			<frameworkAssembly assemblyName="SimplSharpTimerEventInterface.dll" />
+		</frameworkAssemblies>
+		<readme>docs\readme.md</readme>
+    </metadata>		
+</package>

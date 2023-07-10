@@ -3,8 +3,8 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
-# Jetbrains rider files
-.idea/
+# Jetbrains Rider
+.idea
 
 # Crestron-specific
 *.projectinfo

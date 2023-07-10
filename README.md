@@ -1,6 +1,6 @@
 # CrestronSandboxBuildSample
 
-Samples of building for a Crestron 3-series library using Visual Studio 2019. This is a work-in-progress.
+Samples of building for a Crestron 3-series library using Visual Studio 2019 or Jetbrains Rider. This is a work-in-progress.
 
 ## Prerequisites
 
@@ -22,34 +22,52 @@ Your machine should be setup to build Crestron C# libraries/programs for 3-serie
 Note that all that we really need from steps 4-8 are the Crestron plugin DLLs. If in the future Crestron can be convinced to provide the dlls along with a nuget package then that will dramatically lower the amount of effort needed.
 
 ### S# Library
-1) In visual studio, create a new .NET framework project. Target framework version should be 3.5.
-2) Unload the project in solution view (right click the project -> unload project)
-3) Double click the project to edit the `.csproj` file manually
-4) Replace the contents of your `.csproj` file the `.csproj` file from this repository
-5) Copy the `Test.Targets` file from your repository to the same directory as your `.csproj` file
-6) Proceed to develop as normal. If a warning about "The target "ResolveSDKReferences" does not exist in the project." shows up on the error list, it can be ignored. It will go away as soon as you build/rebuild the project.
+1) In visual studio, create a new .NET framework project. Target framework version should be **3.5**.
+2) Install the corresponding [Crestron.SimplSharp.SDK.SandboxLibrary](https://www.nuget.org/packages/Crestron.SimplSharp.SDK.SandboxLibrary/) nuget package. This provides everything needed.
+3) Build the solution. The first time there will be an error, this is normal. This is because the package makes edits on the first build to your `.csproj` file to support targeting compact framework. All other builds will work as normal.
+4) Proceed to develop as normal. If a warning about "The target "ResolveSDKReferences" does not exist in the project." shows up on the error list when using Visual Studio, it can be ignored. It will go away as soon as you build/rebuild the project.
+
+### S# ProgramLibrary
+1) In visual studio, create a new .NET framework project. Target framework version should be **3.5**.
+2) Install the corresponding [Crestron.SimplSharp.SDK.SandboxProgramLibrary](https://www.nuget.org/packages/Crestron.SimplSharp.SDK.SandboxProgramLibrary/) nuget package. This provides everything needed.
+3) Build the solution. The first time there will be an error, this is normal. This is because the package makes edits on the first build to your `.csproj` file to support targeting compact framework. All other builds will work as normal.
+4) Proceed to develop as normal. If a warning about "The target "ResolveSDKReferences" does not exist in the project." shows up on the error list when using Visual Studio, it can be ignored. It will go away as soon as you build/rebuild the project.
+
+### S# Program
+1) In visual studio, create a new .NET framework project. Target framework version should be **3.5**.
+2) Install the corresponding [Crestron.SimplSharp.SDK.SandboxProgram](https://www.nuget.org/packages/Crestron.SimplSharp.SDK.SandboxProgram/) nuget package. This provides everything needed.
+3) Build the solution. The first time there will be an error, this is normal. This is because the package makes edits on the first build to your `.csproj` file to support targeting compact framework. All other builds will work as normal.
+4) Proceed to develop as normal. If a warning about "The target "ResolveSDKReferences" does not exist in the project." shows up on the error list when using Visual Studio, it can be ignored. It will go away as soon as you build/rebuild the project.
+
+## Known Issues
+
+See the issues list on Github. A summary:
+
+* There is no intellisense when using visual studio - this is related to the "ResolveSDKReferences" warning in Visual Studio
+* Visual Studio 2022 has switched to using 64-bit MSBuild, so inline code task using COM Interop assemblies to sign the output for the sandbox does not build correctly. See the "Feature_VS2022_Support" Branch for this
+* The SandboxLibrary nuget package fails on the first build - in Rider. Unknown if Visual studio works around this with it's design time builds
 
 ## TODO
 
 1) ~~Registry edits needed? I had to do this in testing. Compact framework build targets look for registry keys to determine tool paths and file paths it needs and those were not set as part of the compact framework install path. I don't know if power toys would either. I don't know if they would get installed as part of net framework 2.0/3.5 SDK but have gotten cleaned due to windows updates. We can provide a .reg file if needed but this can be a manual step that makes adoption poorer.~~ DONE, we do not need these registry paths on a new system. They may still be required as part of the SDK-style project stretch goal but this can be revisited then
-2) File pathing - for people without C:\ drive? This shouldn't be a huge issue, MSBuild provides lots of properties we can utilize. A little bit of research
+2) ~~File pathing - for people without C:\ drive? This shouldn't be a huge issue, MSBuild provides lots of properties we can utilize. A little bit of research~~ COMPLETE, needs testing
 3) Make a .props file as well that the .csproj can reference so that the actual .csproj stays as vanilla as possible.
 4) More Documentation and user guides
 5) ~~Confirming this works from a freshly setup windows 10 system~~ DONE
 6) Confirming this works from a freshly setup windows 11 system
 7) User testing with a variety of real life projects
-8) Figure out how to get rid of the warning about "ResolveSDKReferences" target not existing
+8) Figure out how to get rid of the warning about "ResolveSDKReferences" target not existing - In Progress. 
   
 ## Stretch Goals
 
-1) Introducing a Nuget package that provides the props/targets files and invokes the signing functionality using the Crestron plugin. Crestron plugin installed by user unless Crestron agrees to authorize distribution of the dll.
-2) Changing nuget package to play nice with Crestron's nuget packages and utilize the dlls distributed by the nuget package
+1) ~~Introducing a Nuget package that provides the props/targets files and invokes the signing functionality using the Crestron plugin. Crestron plugin installed by user unless Crestron agrees to authorize distribution of the dll.~~ DONE
+2) ~~Changing nuget package to play nice with Crestron's nuget packages and utilize the dlls distributed by the nuget package~~ Done
 3) Custom C# project template for anything that can't be made with the nuget package?
 4) Offer custom MSBuild properties in the .csproj to turn on S# plugin logging and to customize the S# plugin directory
-4) Crestron ProgramLibrary and Program samples
+4) ~~Crestron ProgramLibrary and Program samples~~ DONE
 5) An example of succesfully Multitargeting a library/program with an SDK-style .csproj and having compiler directives to utilize sandbox/non-sandbox function. I have this mostly working but there are issues with a registry key for net 2.0 that isn't an issue for an older style `.csproj`
 6) A sample of building on non-windows systems (user must provide own Crestron plugin dll for signing)
-7) Test builds with visual studio 2022
+7) Test builds with visual studio 2022 - In Progress
 
 ## Resources and background
 
