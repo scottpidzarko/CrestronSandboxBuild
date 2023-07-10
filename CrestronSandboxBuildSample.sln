@@ -15,9 +15,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrestronSandboxProgramSampl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignForCrestronSandboxTask", "src\SignForCrestronSandboxTask\SignForCrestronSandboxTask.csproj", "{1EA64981-78D9-4614-84F2-0606FD685AC9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SdkProjectTest", "src\SdkProjectTest\SdkProjectTest.csproj", "{335556FB-B40C-4E9F-A5AF-CAA47C7B011F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SdkProjectTest", "tests\SdkProjectTest\SdkProjectTest.csproj", "{335556FB-B40C-4E9F-A5AF-CAA47C7B011F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestSignForCrestronSandboxTask", "TestSignForCrestronSandboxTask\TestSignForCrestronSandboxTask.csproj", "{B442FB6E-9EBF-4FA7-9A4D-7B2ADC75FD02}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestSignForCrestronSandboxTask", "tests\TestSignForCrestronSandboxTask\TestSignForCrestronSandboxTask.csproj", "{B442FB6E-9EBF-4FA7-9A4D-7B2ADC75FD02}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
