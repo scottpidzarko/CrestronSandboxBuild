@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using Crestron.SimplSharp;
 
@@ -34,13 +35,24 @@ internal void add_RecoverNotificationEvent(DelegateNoParametersEvent value)
 }
 
 */
-namespace CrestronSandboxLibrarySample
+namespace CrestronSandboxProgramSample 
 {
     public delegate void DelegateNoParametersEvent(EventArgs args);
 
     public class Class1
     {
-        internal event DelegateNoParametersEvent RecoverNotificationEvent;
+        /*
+        private DelegateNoParametersEvent _delegateNoParametersEvent;
+        public event DelegateNoParametersEvent RecoverNotificationEvent
+        {
+            [MethodImpl(MethodImplOptions.Synchronized)]
+            add => _delegateNoParametersEvent += (DelegateNoParametersEvent)Delegate.Combine(_delegateNoParametersEvent, value);
+            [MethodImpl(MethodImplOptions.Synchronized)]
+            remove => _delegateNoParametersEvent -= (DelegateNoParametersEvent)Delegate.Remove(_delegateNoParametersEvent, value);
+        }
+        */
+        public event DelegateNoParametersEvent RecoverNotificationEvent;
+
         public Class1()
         {
             CrestronConsole.PrintLine("Hello World!");
@@ -49,12 +61,14 @@ namespace CrestronSandboxLibrarySample
 
         public void TestMethod()
         {
-            CrestronConsole.PrintLine("Hello from TestMethod!");            
+            CrestronConsole.PrintLine("Hello from TestMethod!");
+            //_delegateNoParametersEvent?.Invoke(EventArgs.Empty);
+            RecoverNotificationEvent?.Invoke(EventArgs.Empty);
         }
 
         private void RecoverNotificationEventHandler(EventArgs args)
         {
-
+            CrestronConsole.PrintLine("RecoverNotificationEventHandler");
         }
     }
 }

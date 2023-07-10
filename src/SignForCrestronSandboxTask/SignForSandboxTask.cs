@@ -11,14 +11,20 @@ using static System.Environment.SpecialFolder;
 
 namespace Microsoft.Build.Tasks
 {
-    /*
-     * Class: MakeDir
-     *
-     * An MSBuild task that creates one or more directories.
-     *
-     */
     public class SignForSandboxTask : Utilities.Task
     {
+        private string programInfoFileName;
+        private string targetPath;
+        private string targetName;
+        private string packagePath;
+        private string outputPath;
+        private string archiveFilename;
+        private string excludeTargets;
+        private string references;
+        private string assemblyVersion;
+        private string projectDir;
+        private string targetDir;
+
         // The Required attribute indicates the following to MSBuild:
         //	     - if the parameter is a scalar type, and it is not supplied, fail the build immediately
         //	     - if the parameter is an array type, and it is not supplied, pass in an empty array
@@ -97,18 +103,6 @@ namespace Microsoft.Build.Tasks
             get => targetDir;
             set => targetDir = value;
         }
-
-        private string programInfoFileName;
-        private string targetPath;
-        private string targetName;
-        private string packagePath;
-        private string outputPath;
-        private string archiveFilename;
-        private string excludeTargets;
-        private string references;
-        private string assemblyVersion;
-        private string projectDir;
-        private string targetDir;
 
         /// <summary>
         /// Execute is part of the Microsoft.Build.Framework.ITask interface.

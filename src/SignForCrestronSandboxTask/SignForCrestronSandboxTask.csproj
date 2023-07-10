@@ -122,6 +122,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GenerateNetCfCompatibleCsprojTask.cs" />
     <Compile Include="SignForSandboxTask.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
