@@ -1,0 +1,20 @@
+#DEFAULT_VOLATILE
+#ENABLE_STACK_CHECKING
+#ENABLE_TRACE
+#HELP_BEGIN
+#HELP_END
+
+#USER_SIMPLSHARP_LIBRARY "CrestronSandboxLibrarySample"
+
+DIGITAL_INPUT Test_Input;
+
+Class1 myClass;
+
+PUSH input
+{
+    myClass.TestMethod();
+}
+Function Main()
+{   
+    WaitForInitializationComplete();
+}

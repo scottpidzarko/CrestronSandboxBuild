@@ -1,0 +1,60 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net35-cf;</TargetFrameworks>
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+       <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <AssemblyName>SdkProjectTest</AssemblyName>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyCopyrightAttribute>false</GenerateAssemblyCopyrightAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <GenerateAssemblyDescriptionAttribute>false</GenerateAssemblyDescriptionAttribute>
+    <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
+    <GenerateAssemblyInformationalVersionAttribute>false</GenerateAssemblyInformationalVersionAttribute>
+    <GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <RootNamespace>SdkProjectTest</RootNamespace>
+    <LangVersion>7.2</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)' == 'net35-cf'">
+    <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>CompactFramework</TargetFrameworkProfile>
+    <DefineConstants>NET35_CF;WindowsCE;SIMPLSHARP</DefineConstants>
+    <DisableImplicitFrameworkReferences>True</DisableImplicitFrameworkReferences>
+    <NoStdLib>True</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <FileAlignment>512</FileAlignment>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <PlatformID>E2BECB1F-8C8C-41ba-B736-9BE7D946A398</PlatformID>
+    <Optimize>False</Optimize>
+    <AssemblySearchPaths>$(AssemblySearchPaths);C:\Program Files (x86)\Microsoft.NET\SDK\CompactFramework\v3.5\WindowsCE;</AssemblySearchPaths>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net35-cf' ">
+    <Reference Include="mscorlib, Version=3.5.0.0, Culture=neutral, PublicKeyToken=969db8053d3322ac" />
+    <Reference Include="System, Version=3.5.0.0, Culture=neutral, PublicKeyToken=969db8053d3322ac" />
+    <Reference Include="System.Core, Version=3.5.0.0, Culture=neutral, PublicKeyToken=969db8053d3322ac" />
+	<Reference Include="C:\Program Files (x86)\Crestron\Cresdb\Programming\Libraries\Required References\SimplSharpPro.exe" />
+    <Reference Include="C:\Program Files (x86)\Crestron\Cresdb\Programming\Libraries\Required References\SimplSharpHelperInterface.dll" />
+    <Reference Include="C:\Program Files (x86)\Crestron\Cresdb\Programming\Libraries\Required References\SimplSharpCustomAttributesInterface.dll" />
+    <Reference Include="C:\Program Files (x86)\Crestron\Cresdb\Programming\Libraries\Required References\Crestron.SimplSharpPro.DeviceSupport.dll" />
+	<Reference Include="C:\Program Files (x86)\Crestron\Cresdb\Programming\Libraries\Crestron.SimplSharpPro.AudioDistribution.dll" />
+    <Reference Include="C:\Program Files (x86)\Crestron\Cresdb\Programming\Libraries\Crestron.SimplSharpPro.CrestronConnected.dll" />
+	<Reference Include="C:\Program Files (x86)\Crestron\Cresdb\Programming\Libraries\Crestron.SimplSharpPro.DM.dll" />
+	<Reference Include="C:\Program Files (x86)\Crestron\Cresdb\Programming\Libraries\Crestron.SimplSharpPro.EthernetCommunications.dll" />
+	<Reference Include="C:\Program Files (x86)\Crestron\Cresdb\Programming\Libraries\Crestron.SimplSharpPro.Fusion.dll" />
+	<Reference Include="C:\Program Files (x86)\Crestron\Cresdb\Programming\Libraries\Crestron.SimplSharpPro.Gateways.dll" />
+	<Reference Include="C:\Program Files (x86)\Crestron\Cresdb\Programming\Libraries\Crestron.SimplSharpPro.GeneralIO.dll" />
+	<Reference Include="C:\Program Files (x86)\Crestron\Cresdb\Programming\Libraries\Crestron.SimplSharpPro.Keypads.dll" />
+	<Reference Include="C:\Program Files (x86)\Crestron\Cresdb\Programming\Libraries\Crestron.SimplSharpPro.Lighting.dll" />
+	<Reference Include="C:\Program Files (x86)\Crestron\Cresdb\Programming\Libraries\Crestron.SimplSharpPro.Locks.dll" />
+	<Reference Include="C:\Program Files (x86)\Crestron\Cresdb\Programming\Libraries\Crestron.SimplSharpPro.Media.dll" />
+	<Reference Include="C:\Program Files (x86)\Crestron\Cresdb\Programming\Libraries\Crestron.SimplSharpPro.Remotes.dll" />
+	<Reference Include="C:\Program Files (x86)\Crestron\Cresdb\Programming\Libraries\Crestron.SimplSharpPro.Shades.dll" />
+	<Reference Include="C:\Program Files (x86)\Crestron\Cresdb\Programming\Libraries\Crestron.SimplSharpPro.Thermostats.dll" />
+	<Reference Include="C:\Program Files (x86)\Crestron\Cresdb\Programming\Libraries\Crestron.SimplSharpPro.ThreeSeriesCards.dll" />
+	<Reference Include="C:\Program Files (x86)\Crestron\Cresdb\Programming\Libraries\Crestron.SimplSharpPro.UC.dll" />
+	<Reference Include="C:\Program Files (x86)\Crestron\Cresdb\Programming\Libraries\Crestron.SimplSharpPro.UI.dll" />
+  </ItemGroup>
+</Project>
