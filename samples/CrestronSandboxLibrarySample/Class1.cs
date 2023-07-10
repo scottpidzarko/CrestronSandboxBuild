@@ -35,7 +35,7 @@ internal void add_RecoverNotificationEvent(DelegateNoParametersEvent value)
 }
 
 */
-namespace CrestronSandboxProgramSample 
+namespace CrestronSandboxLibrarySample 
 {
     public delegate void DelegateNoParametersEvent(EventArgs args);
 
